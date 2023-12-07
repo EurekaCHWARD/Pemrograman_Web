@@ -14,5 +14,6 @@ abstract class MobilModel {
         $this->tahun = $tahun;
         $this->warna = $warna;
     }
+    abstract public function getInfo();
 }
 ?>

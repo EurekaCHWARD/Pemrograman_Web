@@ -8,7 +8,6 @@ require_once 'Controllers/SUVController.php';
 use Mobil\Controllers\SedanController;
 use Mobil\Controllers\SUVController;
 
-// Contoh penggunaan
 $sedan = new SedanController('Toyota', 'Camry', 2022, 'Hitam');
 echo $sedan->getInfo() . PHP_EOL;
 echo $sedan->start() . PHP_EOL;
