@@ -2,7 +2,7 @@
 
 namespace app\Routes;
 
-include "/xampp/htdocs/app/Controller/ProductController.php";
+include "/xampp/htdocs/Praktikum/Controller/ProductController.php";
 
 use app\Controller\ProductController;
 

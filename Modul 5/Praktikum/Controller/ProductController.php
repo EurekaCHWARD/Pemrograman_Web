@@ -2,8 +2,8 @@
 
 namespace app\Controller;
 
-include "/xampp/htdocs/app/Traits/ApiResponseFormatter.php";
-include "/xampp/htdocs/app/Models/Product.php";
+include "/xampp/htdocs/Praktikum/Traits/ApiResponseFormatter.php";
+include "/xampp/htdocs/Praktikum/Models/Product.php";
 
 use app\Models\Product;
 use app\Traits\ApiResponseFormatter;

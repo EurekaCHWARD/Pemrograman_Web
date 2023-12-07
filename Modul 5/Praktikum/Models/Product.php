@@ -2,7 +2,7 @@
 
 namespace app\Models;
 
-include "/xampp/htdocs/app/Config/DatabaseConfig.php";
+include "/xampp/htdocs/Praktikum/Config/DatabaseConfig.php";
 
 use app\Config\DatabaseConfig;
 use mysqli;
