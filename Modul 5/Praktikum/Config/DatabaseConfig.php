@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Config;
+namespace Praktikum\Config;
 
 class DatabaseConfig
 {
@@ -8,6 +8,6 @@ class DatabaseConfig
     public $host = "localhost";
     public $user = "root";
     public $password = "";
-    public $database_name = "modul 5";
+    public $database_name = "modul5";
     public $port = 3306;
 }

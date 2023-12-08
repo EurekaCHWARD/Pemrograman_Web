@@ -2,9 +2,9 @@
 
 header("Content-Type: application/json; charset=UTF-8");
 
-include "/xampp/htdocs/app/Routes/ProductRoutes.php";
+include "/xampp/htdocs/Praktikum/Routes/ProductRoutes.php";
 
-use app\Routes\ProductRoutes;
+use Praktikum\Routes\ProductRoutes;
 
 // TANGKAP REQUEST METHOD
 $method = $_SERVER['REQUEST_METHOD'];

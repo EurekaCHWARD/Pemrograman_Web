@@ -1,12 +1,12 @@
 <?php
 
-namespace app\Controller;
+namespace Praktikum\Controller;
 
 include "/xampp/htdocs/Praktikum/Traits/ApiResponseFormatter.php";
 include "/xampp/htdocs/Praktikum/Models/Product.php";
 
-use app\Models\Product;
-use app\Traits\ApiResponseFormatter;
+use Praktikum\Models\Product;
+use Praktikum\Traits\ApiResponseFormatter;
 
 class ProductController
 {

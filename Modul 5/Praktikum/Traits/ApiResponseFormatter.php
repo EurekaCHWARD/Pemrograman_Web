@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Traits;
+namespace Praktikum\Traits;
 
 // UNTUK FORMATTING RESPONSE
 trait ApiResponseFormatter {

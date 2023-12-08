@@ -1,10 +1,10 @@
 <?php
 
-namespace app\Models;
+namespace Praktikum\Models;
 
 include "/xampp/htdocs/Praktikum/Config/DatabaseConfig.php";
 
-use app\Config\DatabaseConfig;
+use Praktikum\Config\DatabaseConfig;
 use mysqli;
 
 class Product extends DatabaseConfig
@@ -77,10 +77,11 @@ class Product extends DatabaseConfig
     public function update($data, $id)
     {
         $productName = $data["product_name"];
-        $query = "UPDATE products SET product_name = ? WHERE id = ?";
+        $idCategory = $data["category_id"];
+        $query = "UPDATE products SET product_name = ?, category_id = ? WHERE product_id = ?";
         $stmt = $this->conn->prepare($query);
         // huruf "s" berarti tipe parameter product_name adalah String dan huruf "i" berarti parameter id adalah integer
-        $stmt->bind_param("si", $productName, $id);
+        $stmt->bind_param("sii", $productName, $id, $idCategory);
         $stmt->execute();
         $this->conn->close();
     }
@@ -88,7 +89,7 @@ class Product extends DatabaseConfig
     // PROSES DELETE DATA DENGAN ID
     public function destroy($id)
     {
-        $query = "DELETE FROM products WHERE id = ?";
+        $query = "DELETE FROM products WHERE product_id = ?";
         $stmt = $this->conn->prepare($query);
         // huruf "i" berarti parameter pertama adalah integer
         $stmt->bind_param("i", $id);
