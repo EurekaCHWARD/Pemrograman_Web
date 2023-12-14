@@ -7,8 +7,8 @@ use App\Http\Requests\UpdateProductCategoryRequest;
 use App\Http\Resources\ProductCategoryCollection;
 use App\Http\Resources\ProductCategoryResource;
 use App\Models\ProductCategory;
-use Exception;
 use Illuminate\Http\Request;
+use Exception;
 
 class ProductCategoryController extends Controller
 {
@@ -67,7 +67,7 @@ class ProductCategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateProductCategoryRequest $request, string $id)
     {
         $validatedRequest = $request->validated();
         try {
@@ -80,7 +80,7 @@ class ProductCategoryController extends Controller
                 "data" => $formattedDatas
             ], 200);
         } catch (Exception $e) {
-            return response()->json($e->getMessage(), 400);
+            return  response()->json($e->getMessage(), 400);
         }
     }
 
