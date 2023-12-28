@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport">
+        <script>
+            function hitungTotal() {
+                var kodeBarang = document.getElementById("kode").value;
+                var jumlahBarang = parseInt(document.getElementById("jumlah").value);
+                var harga;
+
+                switch(kodeBarang) {
+                    case "001":
+                        harga = 10000;
+                        break;
+                    case "002":
+                        harga = 20000;
+                        break;
+                    case "003":
+                        harga = 30000;
+                        break;
+                    default:
+                        alert("Kode barang tidak valid")
+                        return;
+                }
+
+                if (jumlahBarang > 0) {
+                    var totalHarga = harga * jumlahBarang;
+                    alert("Total yang harus dibayar: Rp" + totalHarga) 
+                } else {
+                    alert("Masukkan jumlah barang")
+                }
+                
+                var uangDibayarkan = prompt("Masukkan jumlah uang yang akan dibayarkan:");
+                uangDibayarkan = parseInt(uangDibayarkan);
+
+                if (isNaN(uangDibayarkan)) {
+                    alert("Masukkan nilai yang valid")
+                }
+
+                var kembalian = uangDibayarkan - totalHarga;
+                var uangKurang = totalHarga - uangDibayarkan
+
+                if (kembalian >= 0) {
+                    alert("Total kembalian: Rp" + kembalian);
+                } else {
+                    alert("Uang anda kurang: Rp" + uangKurang)
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <table border="2">
+            <tr>
+                <th>Kode</th>
+                <th>Nama Barang</th>
+                <th>Harga</th>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Barang 1</td>
+                <td>10.000</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Barang 2</td>
+                <td>20.000</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Barang 2</td>
+                <td>30.000</td>
+            </tr>
+        </table>
+
+        <h2>Inputan User</h2>
+        <table border="2">
+            <tr>
+                <td><label for="kode">Kode Barang:</label></td>
+                <td><input type="text" id="kode" placeholder="Masukkan kode barang"></td>
+            </tr>
+            <tr>
+                <td><label for="jumlah">Jumlah Barang:</label></td>
+                <td><input type="number" id="jumlah" placeholder="Masukkan jumlah barang"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="hitungTotal()">Bayar</button></td>
+            </tr>
+        </table>
+    </body>
+</html>
+
