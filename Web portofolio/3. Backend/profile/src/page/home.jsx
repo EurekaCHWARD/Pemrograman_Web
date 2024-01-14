@@ -12,6 +12,8 @@ import basketball from "../images/hobby/basketball.jpg"
 import football from "../images/hobby/football.jpg"
 import volly from "../images/hobby/volly.jpg"
 
+import Contact from './contact';
+
 const HomePage = () => {
   useEffect(() => {
     AOS.init({
@@ -255,60 +257,7 @@ const HomePage = () => {
       </section>
 
       {/* CONTACT */}
-      <section className="faq section-padding">
-        <section className="contact section-padding pt-0" id="contact">
-        <div className="container">
-              <div class="row">
-                <div class="col-lg-6 col-md-6 col-12">
-                    <form action="#" method="get" class="contact-form webform"  role="form">
-                        
-                        <div class="form-group d-flex flex-column-reverse">
-                            <input type="text" class="form-control" name="cf-name" id="cf-name" placeholder="Your Name"/>
-        
-                            <label for="cf-name" class="webform-label">Full Name</label>
-                        </div>
-        
-                        <div class="form-group d-flex flex-column-reverse">
-                            <input type="email" class="form-control" name="cf-email" id="cf-email" placeholder="Your Email"/>
-        
-                            <label for="cf-email" class="webform-label">Your Email</label>
-                        </div>
-        
-                        <div class="form-group d-flex flex-column-reverse">
-                            <textarea class="form-control" rows="5" name="cf-message" id="cf-message" placeholder="Your Message"></textarea>
-        
-                            <label for="cf-message" class="webform-label">Message</label>
-                        </div>
-        
-                        <button type="submit" class="form-control" id="submit-button" name="submit">Send</button>
-                    </form>
-                  </div>
-
-                  <div class="mx-auto col-lg-4 col-md-6 col-12">
-                      <h3 class="my-4 pt-4 pt-lg-0">Say hello</h3>
-                      <p>
-                        <a href="https://api.whatsapp.com/send?phone=6288996866339">
-                            (+62) 889-8686-6339
-                        </a>
-                    </p>
-                      <p>
-                          <a href="mailto:eurekadiaandisy8@webmail.umm.ac.id">
-                              eurekadiaandisy8@webmail.umm.ac.id
-                              <i class="fas fa-arrow-right custom-icon"></i>
-                          </a>
-                      </p>
-                      <ul class="social-links mt-2">
-                          <li><a href="https://www.facebook.com/UMMcampus/" rel="noopener" class="fab fa-facebook"></a></li>
-                          <li><a href="https://twitter.com/ummcampus" rel="noopener" class="fab fa-twitter"></a></li>
-                          <li><a href="https://www.instagram.com/yurereka/" rel="noopener" class="fab fa-instagram"></a></li>
-                          <li><a href="#" rel="noopener" class="fab fa-linkedin"></a></li>
-                          <li><a href="https://www.youtube.com/@UMMtube" rel="noopener" class="fab fa-youtube"></a></li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-        </section>
-      </section>
+      <Contact />
     </>
   );
 };
